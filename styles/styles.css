@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header a {
+    color: rgb(176, 177, 179);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header a:hover {
+    color: aliceblue;
+}
+
+header nav ul li a {
+    transition: transform 0.2s; /* Removido a definição de cor para evitar duplicação */
+}
+
+header nav ul li a:hover {
+    color: aliceblue; /* Alterada a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: chartreuse;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-contato button:hover {
+    box-shadow: 0 0 8px green;
+}
+
+h2.titulo {
+    color: aliceblue;
+    font-size: 38px;
+    text-align: center;
+}
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo-do-site h2 {
+    color: aliceblue;
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.topo-do-site h2 span {
+    color: chartreuse;
+}
+
+.topo-do-site p {
+    color: rgb(255, 255, 255);
+    margin: 40px 0;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(30px); }
+}
+
+.img-topo-site img {
+    position: relative;
+    animation: floatAnimation 2s ease-in-out infinite alternate;
+}
+
+section.serviços {
+    padding: 40px 0;
+    color: aliceblue;
+}
+
+.serviços h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.serviços .serviços-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.serviços-box {
+    color: aliceblue;
+    padding: 40px;
+    margin: 0 20px 40px;
+    flex: 1 0 300px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.serviços-box i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: chartreuse;
+}
+
+.serviços-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.serviços-box p {
+    font-size: 16px;
+}
+
+/* portifolio */
+.portfolio {
+    padding: 40px 0;
+    color: aliceblue;
+}
+
+.portfolio h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+}
+
+/* Estilo para telas menores */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav li {
+        padding: 0 20px;
+    }
+
+    .btn-contato button {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    .topo-do-site {
+        padding: 20px 4%;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-topo-site img {
+        margin-top: 20px;
+    }
+
+    .serviços-box {
+        margin: 0 10px 20px;
+    }
+}
